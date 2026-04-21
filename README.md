@@ -1,114 +1,103 @@
-# Binary Search in Java
+# Java DSA Questions
 
-## Overview
-
-This program implements the **Binary Search algorithm** to find a given element in a sorted array. Binary Search is an efficient searching technique that works by repeatedly dividing the search range into halves.
-
----
-
-## Key Idea
-
-Binary Search compares the target value with the **middle element** of the array:
-
-* If equal → element found
-* If smaller → search in left half
-* If larger → search in right half
+A beginner-friendly repository containing basic **Data Structures and Algorithms (DSA)** implementations in Java.
+This repo currently includes simple searching algorithms and will be expanded with more DSA concepts.
 
 ---
 
-## Algorithm (Steps)
+## 📌 Contents
 
-1. Initialize:
-
-   * `b = 0` (beginning index)
-   * `e = n - 1` (ending index)
-
-2. Repeat while `b <= e`:
-
-   * Find middle index: `mid = (b + e) / 2`
-   * If `a[mid] == find` → element found
-   * If `a[mid] > find` → search left (`e = mid - 1`)
-   * Else → search right (`b = mid + 1`)
-
-3. If loop ends → element not found
+* **Linear Search**
+* **Binary Search**
 
 ---
 
-## Code
+## 🔍 Algorithms Included
 
-```java
-import java.util.*;
+### 1. Linear Search
 
-public class BinarySearch {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+* Searches elements sequentially
+* Works on both sorted and unsorted arrays
+* Time Complexity: **O(n)**
 
-        int[] a = {10, 20, 30, 40, 50};
-        int n = a.length;
+### 2. Binary Search
 
-        System.out.print("Enter the value to search: ");
-        int find = sc.nextInt();
+* Works only on **sorted arrays**
+* Divides search space into halves
+* Time Complexity: **O(log n)**
 
-        int b = 0, e = n - 1, mid;
-        int flag = 0;
+---
 
-        while (b <= e) {
-            mid = (b + e) / 2;
+## 🛠️ Technologies Used
 
-            if (a[mid] == find) {
-                flag = 1;
-                break;
-            } 
-            else if (a[mid] > find) {
-                e = mid - 1;
-            } 
-            else {
-                b = mid + 1;
-            }
-        }
+* Java
+* VS Code / IntelliJ IDEA
 
-        if (flag == 0)
-            System.out.println(find + " is Not found!");
-        else
-            System.out.println(find + " is found!");
+---
 
-        sc.close();
-    }
-}
+## ▶️ How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/codew1thsumit/Java-DSA-Questions.git
+   ```
+
+2. Navigate to the folder:
+
+   ```bash
+   cd Java-DSA-Questions
+   ```
+
+3. Compile the program:
+
+   ```bash
+   javac FileName.java
+   ```
+
+4. Run the program:
+
+   ```bash
+   java FileName
+   ```
+
+---
+
+## 📂 File Structure
+
+``` Java-DSA-Questions/
+│── LinearSearch.java
+│── BinarySearch.java
+│── README.md
 ```
 
 ---
 
-## Time Complexity
+## 🎯 Purpose
 
-* **Best Case:** O(1)
-* **Average Case:** O(log n)
-* **Worst Case:** O(log n)
-
----
-
-## Space Complexity
-
-* **O(1)** (no extra space used)
+* Practice DSA basics
+* Understand searching algorithms
+* Prepare for exams and coding interviews
 
 ---
 
-## Important Notes
+## 🚀 Future Updates
 
-* The array **must be sorted** before applying Binary Search
-* More efficient than Linear Search for large datasets
+* Sorting Algorithms (Bubble, Selection, Insertion)
+* Recursion
+* Arrays & Strings problems
+* Stack & Queue
+* Linked List
 
 ---
 
-## Example
+## 👤 Author
 
-Input:
+**Sumit Bhaya**
+GitHub: [codew1thsumit](https://github.com/codew1thsumit)
 
-Enter the value to search: 30
+---
 
-Output:
-30 is found!
+## ⭐ Support
 
-## Conclusion
-
-Binary Search is a fast and efficient algorithm for searching in sorted data, reducing the search space by half in each step.
+If you find this helpful, consider giving this repo a ⭐
