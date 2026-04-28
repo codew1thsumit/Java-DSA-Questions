@@ -9,6 +9,9 @@ This repo currently includes simple searching algorithms and will be expanded wi
 
 * **Linear Search**
 * **Binary Search**
+* **Bubble Sort**
+* **Selection Sort**
+* **Insertation Sort**
 
 ---
 
