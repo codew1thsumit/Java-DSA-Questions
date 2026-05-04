@@ -34,5 +34,6 @@ public class InsertationSort {
         for(i = 0 ; i < n ; i++){
             System.out.print(a[i]+" ");
         }  
+        
     }
 }
